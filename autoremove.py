@@ -4,9 +4,15 @@ import os
 
 def main():
     directory, filename = sys.argv[1:]
-    os.remove(os.path.join(directory, "a.out"))
+    try:
+        os.remove(os.path.join(directory, "a.out"))
+    except:
+        pass
     for f in ["", ".hi", ".o"]:
-        os.remove(os.path.join(directory, filename+f))
+        try:
+            os.remove(os.path.join(directory, filename+f))
+        except:
+            pass
 
 if __name__ == "__main__":
     main()
