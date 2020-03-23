@@ -13,10 +13,10 @@
 package main
 
 func main() {
-    var min_long_long int64 = ^((int64(-1))>>1);
-    var max_long_long int64 = (int64(-1))>>1;
-    var min_int int = ^((int(-1))>>1);
-    var max_int int = (int(-1))>>1;
+    var max_long_long int64 = int64((^uint64(0))>>1)
+    var min_long_long int64 = -max_long_long-1
+    var max_int int = int((^uint(0))>>1)
+    var min_int int = -max_int-1
     println("int64: ", "min: ", min_long_long, "max: ", max_long_long)
-	println("int64: ", "min: ", min_int, "max: ", max_int)
+	println("int: ", "min: ", min_int, "max: ", max_int)
 }

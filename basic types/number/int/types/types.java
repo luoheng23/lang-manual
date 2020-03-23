@@ -1,18 +1,19 @@
 // Int
-// go语言提供各种大小的整型
-// int8 -> int8
-// uint8 -> uint8
-// int16 -> int16
-// uint16 -> uint16
-// int32 -> int32
-// uint32 -> uint32
-// int64 -> int64
-// uint64 -> uint64
-// int -> int
-// uint -> uint
+// java语言提供各种大小的整型
+// java没有无符号数，没有平台相关的整型
+// int8 -> byte
+// int16 -> short
+// int32 -> int
+// int64 -> long
 class Int {
     public static void main(String[] args) {
-        long a = -423;
+        long max_long_long = Long.MAX_VALUE;
+        long min_long_long = Long.MIN_VALUE;
+        int max_int = Integer.MAX_VALUE;
+        int min_int = Integer.MIN_VALUE;
+        System.out.println("int64: "+ "min: "+ min_long_long+ "\nmax: "+ max_long_long);
+        System.out.println("int: "+ "min: "+ min_int+ "\nmax: "+ max_int);
+    
 
     }
 }
